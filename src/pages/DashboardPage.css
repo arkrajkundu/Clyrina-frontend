@@ -1,0 +1,231 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fc;
+}
+
+/* Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20vw;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #e0e6ed;
+}
+
+.nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background-color: #e7f1ff;
+  color: #007bff;
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #e0e6ed;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.logout-btn {
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.logout-btn:hover {
+  color: #0056b3;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.add-camera-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.add-camera-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Camera List */
+.camera-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns with equal width */
+  gap: 20px;
+  width: 100%;
+}
+
+.camera-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.camera-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.video-container {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-js {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+}
+
+.modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.add-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.add-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
